@@ -33,6 +33,9 @@ function wrongLetter() {
 function loser() {
     losses++
     document.getElementById("losses").innerHTML = losses;
+    // Reset guesses back to 9
+    guesses = 9;
+    document.getElementById("guesses").textContent = guesses;
 }
 
 
@@ -47,22 +50,16 @@ document.querySelector(".random-letter").innerHTML = randomLetter;
 document.onkeydown = function (e) {
     var keypress = e.key;
     
-    if(keypress === randomLetter) {
+    if (keypress === randomLetter) {
     // If it's correct, user wins + win count goes up + game resets
         winner();
     } else {
     // If it's wrong, take one guess away + display the wrong letter to the DOM
         wrongLetter();
     }
+    
+    // If winner runs out of guesses and loses, add one loss + reset both game and guess count
+    if (guesses == 0) {
+        loser();
+    }
 }
-
-
-
-
-
-// If winner runs out of guesses and loses, add one loss + reset both game and guess count
-
-
-
-
-
