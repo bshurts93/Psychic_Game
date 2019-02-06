@@ -25,6 +25,11 @@ h2 { font-size: 2rem; margin-top: 1rem; }
     background-color: rgb(209, 209, 209);
 }
 
+.used-letters {
+    width: auto;
+    display: block;
+}
+
 
 /* TESTING OBJECTS */
 

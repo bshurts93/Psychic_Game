@@ -7,6 +7,7 @@ var randomLetter;
 var wins = parseInt(document.getElementById("wins").textContent);
 var losses = parseInt(document.getElementById("losses").textContent);
 var guesses = parseInt(document.getElementById("guesses").textContent);
+var usedLetters = [ ];
 
 
 
@@ -22,6 +23,9 @@ function winner() {
     // Add win
     wins++;
     document.getElementById("wins").innerHTML = wins;
+    // Reset array
+    usedLetters = [ ];
+    document.getElementById("used").innerHTML = " ";
     // New letter
     getRandomLetter();
 }
@@ -36,6 +40,9 @@ function loser() {
     // Add loss
     losses++
     document.getElementById("losses").innerHTML = losses;
+    // Reset array
+    usedLetters = [ ];
+    document.getElementById("used").innerHTML = " ";
     // New letter
     getRandomLetter();
     // Reset guesses back to 9
@@ -59,15 +66,19 @@ document.querySelector(".random-letter").innerHTML = randomLetter;
 // User picks letter on keyboard
 document.onkeydown = function (e) {
     var keypress = e.key;
-    
+
     if (keypress === randomLetter) {
-    // If it's correct, user wins + win count goes up + game resets
+        // If it's correct, user wins + win count goes up + game resets
         winner();
     } else {
-    // If it's wrong, take one guess away + display the wrong letter to the DOM
+        // Take away guess + display to DOM
         wrongLetter();
+
+        // Push the wrong key to the array and display
+        usedLetters.push(keypress);
+        document.getElementById("used").innerHTML = usedLetters;
     }
-    
+
     // If winner runs out of guesses and loses, add one loss + reset both game and guess count
     if (guesses == 0) {
         loser();
