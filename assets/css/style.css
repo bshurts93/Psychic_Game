@@ -11,3 +11,9 @@ h2 { font-size: 2rem; margin-top: 1rem; }
     padding: 2rem;
     text-align: center;
 }
+
+/* DOM OBJECTS */
+
+.random-letter {
+    font-size: 2rem;
+}
