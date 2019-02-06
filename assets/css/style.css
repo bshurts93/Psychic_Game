@@ -1,0 +1,12 @@
+/* GLOBAL / REUSABLE */
+
+h1 { font-size: 3rem; }
+
+.container {
+    width: 80%;
+    background-color: rgb(238, 238, 238);
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+}
