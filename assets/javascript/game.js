@@ -6,6 +6,7 @@ var randomLetter;
 // SCORING
 var wins = parseInt(document.getElementById("wins").textContent);
 var losses = parseInt(document.getElementById("losses").textContent);
+var guesses = parseInt(document.getElementById("guesses").textContent);
 
 
 
@@ -21,6 +22,12 @@ function winner() {
     wins++;
     document.getElementById("wins").innerHTML = wins;
     getRandomLetter();
+}
+
+function wrongLetter() {
+    // Take away guess after wrong guess
+    guesses--
+    document.getElementById("guesses").textContent = guesses;
 }
 
 function loser() {
@@ -41,16 +48,16 @@ document.onkeydown = function (e) {
     var keypress = e.key;
     
     if(keypress === randomLetter) {
+    // If it's correct, user wins + win count goes up + game resets
         winner();
     } else {
-        loser();
+    // If it's wrong, take one guess away + display the wrong letter to the DOM
+        wrongLetter();
     }
 }
 
-// If it's correct, user wins + win count goes up + game resets
 
 
-// If it's wrong, take one guess away + display the wrong letter to the DOM
 
 
 // If winner runs out of guesses and loses, add one loss + reset both game and guess count
