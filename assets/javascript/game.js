@@ -19,8 +19,10 @@ function getRandomLetter() {
 }
 
 function winner() {
+    // Add win
     wins++;
     document.getElementById("wins").innerHTML = wins;
+    // New letter
     getRandomLetter();
 }
 
@@ -31,8 +33,16 @@ function wrongLetter() {
 }
 
 function loser() {
+    // Add loss
     losses++
     document.getElementById("losses").innerHTML = losses;
+    // New letter
+    getRandomLetter();
+    // Reset guesses back to 9
+    resetGuesses();
+}
+
+function resetGuesses() {
     // Reset guesses back to 9
     guesses = 9;
     document.getElementById("guesses").textContent = guesses;
