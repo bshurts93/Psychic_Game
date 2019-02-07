@@ -70,6 +70,9 @@ document.onkeydown = function (e) {
     if (keypress === randomLetter) {
         // If it's correct, user wins + win count goes up + game resets
         winner();
+    } else if (usedLetters.includes(keypress)) {
+        // Test array to see if the letter has been guessed this round
+        console.log("you already guessed that!");
     } else {
         // Take away guess + display to DOM
         wrongLetter();
