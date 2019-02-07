@@ -7,7 +7,7 @@ var randomLetter;
 var wins = parseInt(document.getElementById("wins").textContent);
 var losses = parseInt(document.getElementById("losses").textContent);
 var guesses = parseInt(document.getElementById("guesses").textContent);
-var usedLetters = [ ];
+var usedLetters = [];
 
 
 
@@ -23,11 +23,15 @@ function winner() {
     // Add win
     wins++;
     document.getElementById("wins").innerHTML = wins;
+    // Change DOM message
+    document.querySelector(".message").innerHTML = "You win!";
     // Reset array
-    usedLetters = [ ];
+    usedLetters = [];
     document.getElementById("used").innerHTML = " ";
     // New letter
     getRandomLetter();
+    // Reset guesses back to 9
+    resetGuesses();
 }
 
 function wrongLetter() {
@@ -40,8 +44,10 @@ function loser() {
     // Add loss
     losses++
     document.getElementById("losses").innerHTML = losses;
+    // Change DOM message
+    document.querySelector(".message").innerHTML = "You lose!";
     // Reset array
-    usedLetters = [ ];
+    usedLetters = [];
     document.getElementById("used").innerHTML = " ";
     // New letter
     getRandomLetter();

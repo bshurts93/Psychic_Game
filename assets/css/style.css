@@ -33,6 +33,16 @@ h2 { font-size: 2rem; margin-top: 1rem; }
     margin: 0 auto;
 }
 
+/* DOM MESSAGE */
+
+.message-box {
+    width: 25%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-color: rgb(209, 209, 209);
+}
+
 
 /* TESTING OBJECTS */
 
