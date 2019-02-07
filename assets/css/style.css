@@ -1,4 +1,4 @@
-/* GLOBAL / REUSABLE */
+/* GLOBAL / TYPOGRAPHY */
 
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; margin-top: 1rem; }
@@ -12,6 +12,8 @@ h2 { font-size: 2rem; margin-top: 1rem; }
     text-align: center;
 }
 
+.half-arrow { font-size: 2rem; }
+
 /* SCORING */
 .score-container {
     width: 100%;
@@ -19,15 +21,16 @@ h2 { font-size: 2rem; margin-top: 1rem; }
 
 .score-box {
     width: 25%;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
     display: inline-block;
-    padding: .5rem;
-    margin: .5rem;
     background-color: rgb(209, 209, 209);
 }
 
 .used-letters {
-    width: auto;
+    width: 33%;
     display: block;
+    margin: 0 auto;
 }
 
 
@@ -36,3 +39,5 @@ h2 { font-size: 2rem; margin-top: 1rem; }
 .random-letter {
     font-size: 2rem;
 }
+
+.letter-test { display: none; }
