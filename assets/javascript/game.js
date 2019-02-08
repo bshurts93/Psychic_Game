@@ -92,18 +92,3 @@ document.onkeydown = function (e) {
         loser();
     }
 }
-
-
-function biggerFish (x, y) {
-    if (x > y) {
-        console.log(x);
-    } else {
-        console.log(y);
-    }
-}
-
-biggerFish(1, 2);
-biggerFish(4, 19);
-biggerFish(1000, 34);
-biggerFish(3005, 3);
-biggerFish(.9, .91);
