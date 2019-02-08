@@ -24,7 +24,7 @@ function winner() {
     wins++;
     document.getElementById("wins").innerHTML = wins;
     // Change DOM message
-    document.querySelector(".message").innerHTML = "You win!";
+    document.querySelector(".message").innerHTML = "You win! The letter was " + randomLetter.toUpperCase();
     // Reset array
     usedLetters = [];
     document.getElementById("used").innerHTML = " ";
@@ -45,7 +45,7 @@ function loser() {
     losses++
     document.getElementById("losses").innerHTML = losses;
     // Change DOM message
-    document.querySelector(".message").innerHTML = "You lose!";
+    document.querySelector(".message").innerHTML = "You lose! The letter was " + randomLetter.toUpperCase();
     // Reset array
     usedLetters = [];
     document.getElementById("used").innerHTML = " ";
@@ -62,7 +62,7 @@ function resetGuesses() {
 }
 
 
-//-----------------// PSUDO CODE //-----------------//
+//-----------------// PSUEDO CODE //-----------------//
 
 
 // App generates a randomly selected letter and stored in a variable
@@ -92,3 +92,18 @@ document.onkeydown = function (e) {
         loser();
     }
 }
+
+
+function biggerFish (x, y) {
+    if (x > y) {
+        console.log(x);
+    } else {
+        console.log(y);
+    }
+}
+
+biggerFish(1, 2);
+biggerFish(4, 19);
+biggerFish(1000, 34);
+biggerFish(3005, 3);
+biggerFish(.9, .91);
